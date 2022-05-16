@@ -27,6 +27,7 @@ public class PortfolioRepository {
 		PORTFOLIOS.add(new Portfolio("AC-003", 1403));
 		PORTFOLIOS.add(new Portfolio("AC-004", 1404));
 		PORTFOLIOS.add(new Portfolio("AC-005", 1405));
+		PORTFOLIOS.add(new Portfolio("AC-006", 1406));
 	}
 
 	public Optional<Portfolio> findByName(String name) {
