@@ -45,17 +45,13 @@ public class PositionRepository {
 				2022, 12, 31), 1404, "31298WTP9"));
 	}
 
-	public List<Position> getAllPositions() {
-		return POSITIONS;
-	}
-
 	public String findOpenPositionCusipsByDateAndFund(LocalDate localDate,
 			int fund) {
-		
+
 		return POSITIONS.stream().filter(pos -> pos.getFund() == fund)
 				.filter(pos -> localDate.compareTo(pos.getStartDate()) >= 0)
 				.filter(pos -> localDate.compareTo(pos.getStopDate()) <= 0)
-				.distinct().map(Position::getCusip)
+				.map(Position::getCusip).distinct()
 				.collect(Collectors.joining(" , "));
 
 	}

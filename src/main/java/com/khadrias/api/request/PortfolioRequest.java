@@ -10,10 +10,13 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
+
 /**
  * @author mkhadria
  *
  */
+@Data
 public class PortfolioRequest {
 	@NotNull(message = "Portfolio name cannot be null")
 	private List<String> names = new ArrayList<>();
@@ -29,37 +32,4 @@ public class PortfolioRequest {
 	@Max(value = 31, message = "Day cannot be greater than 31")
 	@Min(value = 1, message = "Day cannot be less than 1")
 	private int day;
-
-	public List<String> getNames() {
-		return names;
-	}
-
-	public void setNames(List<String> names) {
-		this.names = names;
-	}
-
-	public int getYear() {
-		return year;
-	}
-
-	public void setYear(int year) {
-		this.year = year;
-	}
-
-	public int getMonth() {
-		return month;
-	}
-
-	public void setMonth(int month) {
-		this.month = month;
-	}
-
-	public int getDay() {
-		return day;
-	}
-
-	public void setDay(int day) {
-		this.day = day;
-	}
-
 }

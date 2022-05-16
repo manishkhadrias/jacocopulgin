@@ -3,8 +3,6 @@
  */
 package com.khadrias.services;
 
-import javax.validation.Valid;
-
 import com.khadrias.api.request.PortfolioRequest;
 
 /**
@@ -14,6 +12,6 @@ import com.khadrias.api.request.PortfolioRequest;
 public interface PortfolioService {
 
 	String findOpenPositionProtfolioOfPreviousDay(
-			@Valid PortfolioRequest portfolioRequest);
+			PortfolioRequest portfolioRequest);
 
 }

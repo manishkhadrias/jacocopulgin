@@ -52,7 +52,6 @@ public class CopyOfPortfolioControllerTest {
 			// Verify request succeed
 			Assert.assertEquals(200, result.getStatusCodeValue());
 			Assert.assertEquals("AC-005 : 31298WTP8 ", result.getBody());
-			 
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -5,7 +5,7 @@ package com.khadrias.repos;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -29,13 +29,9 @@ public class PortfolioRepository {
 		PORTFOLIOS.add(new Portfolio("AC-005", 1405));
 	}
 
-	public List<Portfolio> getAllPortfolios() {
-		return PORTFOLIOS;
-	}
-
-	public Portfolio findByName(String name) {
+	public Optional<Portfolio> findByName(String name) {
 		return PORTFOLIOS.stream().filter(p -> p.getName().equals(name))
-				.collect(Collectors.toList()).get(0);
+				.findAny();
 	}
 
 }
