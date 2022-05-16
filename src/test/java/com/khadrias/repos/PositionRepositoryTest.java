@@ -24,15 +24,12 @@ public class PositionRepositoryTest {
 	@Test
 	public void findOpenPositionCusipsByDateAndFundTest() {
 		assertEquals("31298WTP0 , 31298WTP1",
-				positionRepository.findOpenPositionCusipsByDateAndFund(
-						LocalDate.of(2022, 5, 13), 1401));
+				positionRepository.findOpenPositionCusipsByDateAndFund(LocalDate.of(2022, 5, 13), 1401));
 	}
 
 	@Test
 	public void findOpenPositionCusipsByDateAndFundBlankTest() {
-		assertEquals("",
-				positionRepository.findOpenPositionCusipsByDateAndFund(
-						LocalDate.of(2020, 5, 13), 1401));
+		assertEquals("", positionRepository.findOpenPositionCusipsByDateAndFund(LocalDate.of(2020, 5, 13), 1401));
 	}
 
 }

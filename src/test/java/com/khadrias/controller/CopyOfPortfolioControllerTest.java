@@ -34,8 +34,7 @@ public class CopyOfPortfolioControllerTest {
 	public void findOpenPositionProtfolioOfPreviousDayTest() {
 		try {
 
-			final String baseUrl = "http://localhost:" + randomServerPort
-					+ "/portfolios/";
+			final String baseUrl = "http://localhost:" + randomServerPort + "/portfolios/";
 			URI uri = new URI(baseUrl);
 			PortfolioRequest portfolioRequest = new PortfolioRequest();
 			portfolioRequest.setDay(5);
@@ -45,11 +44,9 @@ public class CopyOfPortfolioControllerTest {
 
 			HttpHeaders headers = new HttpHeaders();
 
-			HttpEntity<PortfolioRequest> request = new HttpEntity<>(
-					portfolioRequest, headers);
+			HttpEntity<PortfolioRequest> request = new HttpEntity<>(portfolioRequest, headers);
 
-			ResponseEntity<String> result = this.restTemplate.postForEntity(
-					uri, request, String.class);
+			ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
 
 			// Verify request succeed
 			Assert.assertEquals(200, result.getStatusCodeValue());

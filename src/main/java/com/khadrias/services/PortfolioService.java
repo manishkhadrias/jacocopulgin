@@ -11,7 +11,6 @@ import com.khadrias.api.request.PortfolioRequest;
  */
 public interface PortfolioService {
 
-	String findOpenPositionProtfolioOfPreviousDay(
-			PortfolioRequest portfolioRequest);
+	String findOpenPositionProtfolioOfPreviousDay(PortfolioRequest portfolioRequest);
 
 }

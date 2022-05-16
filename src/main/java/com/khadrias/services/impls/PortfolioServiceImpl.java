@@ -29,19 +29,14 @@ public class PortfolioServiceImpl implements PortfolioService {
 	PositionRepository positionRepository;
 
 	@Override
-	public String findOpenPositionProtfolioOfPreviousDay(
-			PortfolioRequest portfolioRequest) {
+	public String findOpenPositionProtfolioOfPreviousDay(PortfolioRequest portfolioRequest) {
 		StringBuilder builder = new StringBuilder();
 		for (String name : portfolioRequest.getNames()) {
-			Optional<Portfolio> optionalPortfolio = portfolioRepository
-					.findByName(name);
+			Optional<Portfolio> optionalPortfolio = portfolioRepository.findByName(name);
 			if (optionalPortfolio.isPresent()) {
-				String cusips = positionRepository
-						.findOpenPositionCusipsByDateAndFund(LocalDate.of(
-								portfolioRequest.getYear(),
-								portfolioRequest.getMonth(),
-								portfolioRequest.getDay()), optionalPortfolio
-								.get().getCode());
+				String cusips = positionRepository.findOpenPositionCusipsByDateAndFund(LocalDate
+						.of(portfolioRequest.getYear(), portfolioRequest.getMonth(), portfolioRequest.getDay()),
+						optionalPortfolio.get().getCode());
 
 				if (!cusips.isEmpty()) {
 					builder.append(name + " : ");

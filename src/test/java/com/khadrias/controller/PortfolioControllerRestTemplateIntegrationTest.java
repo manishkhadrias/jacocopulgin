@@ -53,11 +53,9 @@ public class PortfolioControllerRestTemplateIntegrationTest {
 			HttpHeaders headers = new HttpHeaders();
 			headers.add(authorization, token);
 
-			HttpEntity<PortfolioRequest> request = new HttpEntity<>(
-					portfolioRequest, headers);
+			HttpEntity<PortfolioRequest> request = new HttpEntity<>(portfolioRequest, headers);
 
-			ResponseEntity<String> result = this.restTemplate.postForEntity(
-					uri, request, String.class);
+			ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
 
 			// Verify request succeed
 			Assert.assertEquals(200, result.getStatusCodeValue());
@@ -82,11 +80,9 @@ public class PortfolioControllerRestTemplateIntegrationTest {
 			HttpHeaders headers = new HttpHeaders();
 			headers.add(authorization, token);
 
-			HttpEntity<PortfolioRequest> request = new HttpEntity<>(
-					portfolioRequest, headers);
+			HttpEntity<PortfolioRequest> request = new HttpEntity<>(portfolioRequest, headers);
 
-			ResponseEntity<String> result = this.restTemplate.postForEntity(
-					uri, request, String.class);
+			ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
 
 			// Verify request succeed
 			Assert.assertEquals(200, result.getStatusCodeValue());
@@ -111,11 +107,9 @@ public class PortfolioControllerRestTemplateIntegrationTest {
 			HttpHeaders headers = new HttpHeaders();
 			headers.add(authorization, token);
 
-			HttpEntity<PortfolioRequest> request = new HttpEntity<>(
-					portfolioRequest, headers);
+			HttpEntity<PortfolioRequest> request = new HttpEntity<>(portfolioRequest, headers);
 
-			ResponseEntity<String> result = this.restTemplate.postForEntity(
-					uri, request, String.class);
+			ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
 
 			// Verify request succeed
 			Assert.assertEquals(200, result.getStatusCodeValue());

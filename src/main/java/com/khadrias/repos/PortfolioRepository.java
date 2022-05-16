@@ -31,8 +31,7 @@ public class PortfolioRepository {
 	}
 
 	public Optional<Portfolio> findByName(String name) {
-		return PORTFOLIOS.stream().filter(p -> p.getName().equals(name))
-				.findAny();
+		return PORTFOLIOS.stream().filter(p -> p.getName().equals(name)).findAny();
 	}
 
 }
